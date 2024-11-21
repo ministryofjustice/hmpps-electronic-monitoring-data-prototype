@@ -1,20 +1,81 @@
+
 {% extends "layouts/main.html" %}
 
 {% set pageName="Home" %}
+{% block pageTitle %}
+Activities Management prototype
+{% endblock %}
+
+{% block header %}
+
+
+{% endblock %}
 
 {% block content %}
-<!--
-{% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
-
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
+  <div class="govuk-grid-column-three-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+      Prototypes for Electronic data monitoring
     </h1>
-
   </div>
 </div>
 
-{% endblock %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          User research, content docs and flow diagrams.
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body govuk-!-margin-bottom-2">All links open in a new browser window or tab.</p>
+        <p class="govuk-body govuk-!-margin-bottom-2">User research:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="#" target="_blank" class="govuk-link govuk-link--no-visited-state">UR</a></li>
+
+        </ul>
+
+        <p class="govuk-body govuk-!-margin-bottom-2">Copydecks:</p>
+        <ul class="govuk-list govuk-list--bullet">
+
+        </ul>
+
+        <p class="govuk-body govuk-!-margin-bottom-2">Flow diagrams:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="https://miro.com/app/board/uXjVPeHahD4=/?moveToWidget=3458764536702384454&cot=14" target="_blank">View the flow diagrams</a></li>
+        </ul>
+
+      </div>
+    </details>
+    <table class="govuk-table">
+      <thead class="govuk-table__head" >
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" width="15%">Version</th>
+          <th scope="col" class="govuk-table__header" width="15%">Status</th>
+          <th scope="col" class="govuk-table__header">What changed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" >
+            <a href="v1/setup" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 1</a> </td>
+            <td class="govuk-table__cell" >
+              <strong class="govuk-tag govuk-tag--blue">
+                I<span style="text-transform:lowercase;">n design </span>
+              </strong>
+            </td>
+            <td class="govuk-table__cell" >
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Test</li>
+              </ul>
+            </td>
+          </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {% endblock %}
