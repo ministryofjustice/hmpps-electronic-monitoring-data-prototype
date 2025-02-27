@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-UKEF - Claims and recoveries prototype
+EMDI prototype
 {% endblock %}
 
 {% block header %}
-{% set page = 'create' %}
+{% set page = '1' %}
 
 {% include 'includes/proto-header.html' %}
 
@@ -14,10 +14,9 @@ UKEF - Claims and recoveries prototype
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="app-masthead__title govuk-heading-l govuk-!-margin-bottom-3">
-          Claims and Recoveries
+          Home
         </h1>
-        <h3 class="app-masthead__subtitle govuk-heading-m">A collection of services for the management of claims and the subsequent recovery processes.
-        </h3>
+     
       </div>
       <div class="govuk-grid-column-one-third">
       </div>
@@ -29,185 +28,9 @@ UKEF - Claims and recoveries prototype
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          User research, flow diagrams and MVP.
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        <p class="govuk-body govuk-!-margin-bottom-2">All links open in a new browser window or tab.</p>
-        <p class="govuk-body govuk-!-margin-bottom-2">User research:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li><a href="https://ukef.sharepoint.com/:w:/r/sites/pmo-PRO211/Shared%20Documents/Tranche%201/Workstream%20Areas/Claims%20and%20Recoveries/Alpha/User%20Research/User%20Research%20Plan.docx?d=wc47a47e9d32e4a6e9b513714df1175e7&csf=1&web=1&e=2yYhOu" target="_blank" class="govuk-link govuk-link--no-visited-state">UR plan</a></li>
-          <li><a href="https://ukef.sharepoint.com/:p:/r/sites/pmo-PRO211/_layouts/15/Doc.aspx?sourcedoc=%7B63255E8E-2982-4EBC-AACE-712255EF2022%7D&file=Claims%20and%20Recovery%20Alpha%20Research%20Playback%20Round%201.pptx&action=edit&mobileredirect=true
-" target="_blank" class="govuk-link govuk-link--no-visited-state">UR research round 1 analysis playback</a></li>
+   
 
-
-
-        </ul>
-
-        <p class="govuk-body govuk-!-margin-bottom-2">Service design, flow diagram and MVP:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>
-            <a href="https://miro.com/app/board/uXjVMVg1Rd4=/?moveToWidget=3458764557382087042&cot=14"
-              target="_blank">View the overall flow diagrams</a>
-          </li>
-          <li>
-            <a href="https://miro.com/app/board/uXjVMVg1Rd4=/?moveToWidget=3458764563883301283&cot=14"
-              target="_blank">View the receipt / creating a claim request journey and MVP / MVP+</a>
-          </li>
-        </ul>
-      </div>
-    </details>
-
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-caption-xl">Prototype versions</caption>
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header" width="15%">Version</th>
-          <th scope="col" class="govuk-table__header" width="25%">Status</th>
-          <th scope="col" class="govuk-table__header">What changed</th>
-        </tr>
-      </thead>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <a href="/v6/setup" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 6</a>
-          <!--  <a href="/2-0/setup?r=t" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 2</a>-->
-        </td>
-        <td class="govuk-table__cell">
-          <strong class="govuk-tag govuk-tag--blue">
-            I<span style="text-transform:lowercase;">n Design</span>
-          </strong>
-        </td>
-        <td class="govuk-table__cell">
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Addition of reviewer journeys</li>
-            <li>Addition of authoriser journey</li>
-          </ul>
-        </td>
-      </tr>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <a href="/v5/setup" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 5</a>
-            <!--  <a href="/2-0/setup?r=t" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 2</a>-->
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--green">
-              R<span style="text-transform:lowercase;">eady for</span> UR
-            </strong>
-          </td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-list govuk-list--bullet">
-                <li>Claims Dashboard addtion</li>
-                <li>Progress indicators</li>
-                <li>Additon of mousevover help text</li>
-            </ul>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <a href="/v4/setup" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 4</a>
-            <!--  <a href="/2-0/setup?r=t" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 2</a>-->
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--grey">
-              C<span style="text-transform:lowercase;">losed </span>
-            </strong>
-          </td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-list govuk-list--bullet">
-                <li>Breaking up task list into sections</li>
-                <li>Save and continue</li>
-                <li>Save and exit</li>
-                <li>Confirmation pages on leaving flow</li>
-                <li>Sub navigation for breadcrumbs</li>
-            </ul>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <a href="/v3/setup" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 3</a>
-            <!--  <a href="/2-0/setup?r=t" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 2</a>-->
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--grey">
-              C<span style="text-transform:lowercase;">losed </span>
-            </strong>
-          </td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-list govuk-list--bullet">
-              <li>Test of alternative design for section 2 : Examination</li>
-              <li><a href="https://ukef-dtfs.atlassian.net/jira/software/c/projects/FN/boards/47?selectedIssue=FN-1457">Jira 1457</a> Designing a streamlined user journey
-                <ul>
-                  <li>Rework section 2 to show pn;y the necessary 4 steps</li>
-                  <li>1. Pre-examination: Ability to create bespoke workflow and add further steps</li>
-                  <li>1. Pre-examination: Ability to remove steps</li>
-                  <li>2. Examination: Ability to create bespoke workflow and add further steps</li>
-                  <li>2. Pre-examination: Ability to remove steps</li>
-                  </ul>
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <a href="/v2/setup" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 2</a>
-            <!--  <a href="/2-0/setup?r=t" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 2</a>-->
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--grey">
-              C<span style="text-transform:lowercase;">losed </span>
-
-            </strong>
-
-          </td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-list govuk-list--bullet">
-              <li>Part 2 - Examination of claim.</li>
-              <li>Addition of numbering on claim task page</li>
-              <li><a href="https://ukef-dtfs.atlassian.net/jira/software/c/projects/FN/boards/47?selectedIssue=FN-1426" target="_blank">Jira 1426</a> UR iterations
-              <li>
-              <ul>
-                <li>Overview of workload for examiners workload​</li>
-                <li>Show authorisers who have the correct delegated approval</li>
-                <li>Provide an indication to users that their data has been saved</li>
-                <li>Clearly showing the facility ID before a participant creates a claim</li>
-                <li>Clearer explanation of ‘facility value’ change to 'amount at risk'</li>
-                <li>Added 'company info and previous claims page'</li>
-                <li>Has an existing claim been started, view claims, view facilities etc</li>
-                <li>Removed 'address' on card page</li>
-            </ul>
-            </li>
-            <li><a href="https://ukef-dtfs.atlassian.net/jira/software/c/projects/FN/boards/47?selectedIssue=FN-1165" target="_blank"> Jira 1165</a> Calculate delay interest on principal deferred</li>
-            <li><a href="https://ukef-dtfs.atlassian.net/jira/software/c/projects/FN/boards/47?selectedIssue=FN-1166" target="_blank"> Jira 1166</a> Calculate delay interest on interest deferred</li>
-            <li><a href="https://ukef-dtfs.atlassian.net/jira/software/c/projects/FN/boards/47?selectedIssue=FN-1149" target="_blank"> Jira 1149</a> Calculate delay interest on interest</li>
-            <li><a href="https://ukef-dtfs.atlassian.net/jira/software/c/projects/FN/boards/47?selectedIssue=FN-1167" target="_blank"> Jira 1167</a> Calculate delay interest on Interest paid</li>
-            <li><a href="https://ukef-dtfs.atlassian.net/jira/software/c/projects/FN/boards/47?selectedIssue=FN-1169" target="_blank"> Jira 1169</a> Calculate other amounts</li>
-
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <a href="/v1/setup" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 1</a>
-            <!--  <a href="/2-0/setup?r=t" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 2</a>-->
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--grey">
-              C<span style="text-transform:lowercase;">losed </span>
-            </strong>
-
-          </td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-list govuk-list--bullet">
-              <li><a href="https://ukef-dtfs.atlassian.net/jira/software/c/projects/FN/boards/47/backlog?view=detail&selectedIssue=FN-1019&issueLimit=100" target="_blank">Jira 9109</a> Receipt of claim</li>
-                <li><a href="https://ukef-dtfs.atlassian.net/browse/FN-1090" target="_blank">Jira 1090</a> Receipt of claim - sub journey tasks</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    
   </div>
 </div>
 
