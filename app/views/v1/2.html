@@ -1,0 +1,255 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-thirds">
+        <h1 class="govuk-heading-xl">Proto</h1>
+        <div class="govuk-tabs" data-module="govuk-tabs" >
+
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+              <a class="govuk-tabs__tab" href="#overview">
+                Overview
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#detail">
+                Detail
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#action">
+                Action
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-tabs__panel" id="overview" style="height:1200px;" >
+            <h2 class="govuk-heading-l">Past day</h2>
+           
+
+            
+            <div class="govuk-summary-card" style="float: left; width: 50%;">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Person 2
+                </h2>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Details known
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Yes
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Relationship to lead tenant
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Partner
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Age
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      42
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Working situation
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Unable to work because of long-term sickness or disability
+                    </dd>
+                   
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div style="float: right; width: 45%; margin-left: 20px;">
+              <img src="/public/images/1.jpg" alt="User icon" height="100%" width="100%">
+            </div>
+            <div class="govuk-summary-card" style="float: left; width: 50%;">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Person 2
+                </h2>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Details known
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Yes
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Relationship to lead tenant
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Partner
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Age
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      42
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Working situation
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Unable to work because of long-term sickness or disability
+                    </dd>
+                   
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div style="float: right; width: 45%; margin-left: 20px;">
+              <img src="/public/images/2.jpg" alt="User icon" height="100%" width="100%">
+            </div>
+         
+          
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="detail">
+            <h2 class="govuk-heading-l">Past week</h2>
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Sarah Philips
+                </dd>
+                
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  5 January 1978
+                </dd>
+               
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  72 Guild Street<br>London<br>SE23 6FH
+                </dd>
+              
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Contact details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">07700 900457</p>
+                  <p class="govuk-body">sarah.phillips@example.com</p>
+               
+              </div>
+            </dl>
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="action">
+            <h2 class="govuk-heading-l">Past month</h2>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Case manager</th>
+                  <th scope="col" class="govuk-table__header">Cases opened</th>
+                  <th scope="col" class="govuk-table__header">Cases closed</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">David Francis</td>
+                  <td class="govuk-table__cell">98</td>
+                  <td class="govuk-table__cell">95</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Paul Farmer</td>
+                  <td class="govuk-table__cell">122</td>
+                  <td class="govuk-table__cell">131</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Rita Patel</td>
+                  <td class="govuk-table__cell">126</td>
+                  <td class="govuk-table__cell">142</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="contact">
+            <h2 class="govuk-heading-l">Past year</h2>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Case manager</th>
+                  <th scope="col" class="govuk-table__header">Cases opened</th>
+                  <th scope="col" class="govuk-table__header">Cases closed</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">David Francis</td>
+                  <td class="govuk-table__cell">1380</td>
+                  <td class="govuk-table__cell">1472</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Paul Farmer</td>
+                  <td class="govuk-table__cell">1129</td>
+                  <td class="govuk-table__cell">1083</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Rita Patel</td>
+                  <td class="govuk-table__cell">1539</td>
+                  <td class="govuk-table__cell">1265</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+      </div>
+
+      <!--<div class="govuk-grid-column-one-third" style="margin-top: 100px;">
+hello
+      </div>-->
+    </div>
+  </main>
+</div>
+
+  
+{% endblock %}
