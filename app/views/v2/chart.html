@@ -1,0 +1,109 @@
+<h2 class="govuk-heading-l">Violation time in minutes for the last week</h2>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Show violations as table data
+  </button>
+</div>
+<div><section aria-label="Service information" class="govuk-service-navigation"
+  data-module="govuk-service-navigation" style="background-color: white; margin-bottom: 20px; margin-top: -10pxl;">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="#">
+              Last 24 hours
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+            <a class="govuk-service-navigation__link" href="#" aria-current="true">
+              <strong class="govuk-service-navigation__active-fallback">Last 7 days</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="#">
+              Last 28 days
+            </a>
+          </li>
+        </li>
+        <li class="govuk-service-navigation__item">
+          <a class="govuk-service-navigation__link" href="#">
+            Choose a date range
+          </a>
+        </li>
+        <li class="govuk-service-navigation__item">
+          <a class="govuk-service-navigation__link" href="#">
+            All time on curfew
+          </a>
+        </li>
+        </ul>
+      </nav>
+    </div>
+<br />
+   
+
+
+  </div>
+</section>
+</div>
+
+
+
+<div>
+
+    <canvas id="WeekChart"></canvas>
+    <h2 class="govuk-heading-l">Violation time in minutes for the last 4 months</h2>
+    <canvas id="MonthChart"></canvas>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+    const week = document.getElementById('WeekChart');
+    const month = document.getElementById('MonthChart');
+</script>
+    
+    <script>
+    new Chart(week, {
+      type: 'bar',
+      data: {
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        datasets: [{
+          label: 'Time in minutes',
+          data: [12, 19, 3, 5, 2, 3, 9],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+</script>
+    <script>
+    new Chart(month, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April'],
+        datasets: [{
+          label: 'Time in minutes',
+          data: [20, 30, 32, 50],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+    
+  </script>
