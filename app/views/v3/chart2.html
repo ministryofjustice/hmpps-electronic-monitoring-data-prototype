@@ -1,32 +1,27 @@
 
 <div>
-    <canvas id="WeekChart"></canvas>
+    <canvas id="violation"></canvas>
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
-    const week = document.getElementById('WeekChart');
-    const month = document.getElementById('MonthChart');
+    const week = document.getElementById('violation');
 </script>
     
     <script>
-    new Chart(week, {
-      type: 'doughnut',
+    new Chart(violation, {
+      type: 'pie',
+      
       data: {
-        labels: ['Percentage chance of a violation not occuring', 'Percentage change of a violation'],
+        labels: ['Chance of a violation not occuring (%) ', 'Chance of a violation occuring (%) '],
         datasets: [{
-          label: 'Percentage change of a violation',
           data: [20,80],
-          borderWidth: 1
+          backgroundColor: [
+        'rgb(200, 200, 200)',
+         'rgb(255, 0, 0)'
+         
+        ]
         }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
       }
     });
 </script>
-   
