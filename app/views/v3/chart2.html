@@ -1,0 +1,32 @@
+
+<div>
+    <canvas id="WeekChart"></canvas>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const week = document.getElementById('WeekChart');
+    const month = document.getElementById('MonthChart');
+</script>
+    
+    <script>
+    new Chart(week, {
+      type: 'doughnut',
+      data: {
+        labels: ['Percentage chance of a violation not occuring', 'Percentage change of a violation'],
+        datasets: [{
+          label: 'Percentage change of a violation',
+          data: [20,80],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+</script>
+   

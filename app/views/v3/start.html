@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+EMDI prototype
+{% endblock %}
+
+{% block header %}
+{% set page = 'create' %}
+
+{% include 'includes/proto-header.html' %}
+
+<div class="app-masthead">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="app-masthead__title govuk-heading-l govuk-!-margin-bottom-3">
+          Electronic data monitoring insights
+        </h1>
+        <h3 class="app-masthead__subtitle govuk-heading-m">A collection of services for the management of people on licence with electronic monitoring.
+        </h3>
+      </div>
+      <div class="govuk-grid-column-one-third">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          User research, flow diagrams and MVP.
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body govuk-!-margin-bottom-2">All links open in a new browser window or tab.</p>
+        <p class="govuk-body govuk-!-margin-bottom-2">User research:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="" target="_blank" class="govuk-link govuk-link--no-visited-state">UR plan</a></li>
+          <li><a href="" target="_blank" class="govuk-link govuk-link--no-visited-state">UR research round 1 analysis playback</a></li>
+
+
+
+        </ul>
+
+        <p class="govuk-body govuk-!-margin-bottom-2">Service design, flow diagram and MVP:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="https://miro.com/app/board/uXjVMVg1Rd4=/?moveToWidget=3458764557382087042&cot=14"
+              target="_blank">View the overall flow diagrams</a>
+          </li>
+          <li>
+            <a href="https://miro.com/app/board/uXjVMVg1Rd4=/?moveToWidget=3458764563883301283&cot=14"
+              target="_blank">View the journey and MVP / MVP+</a>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-caption-xl">Prototype versions</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" width="15%">Version</th>
+          <th scope="col" class="govuk-table__header" width="25%">Status</th>
+          <th scope="col" class="govuk-table__header">What changed</th>
+        </tr>
+      </thead>
+     
+    
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/v1/setup" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Version 1</a>
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--blue">
+              I<span style="text-transform:lowercase;">n design </span>
+            </strong>
+
+          </td>
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="" target="_blank">Jira 1234</a> Description of what changed</li>
+                <li><a href="" target="_blank">Jira 1235</a> Description of what changed</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

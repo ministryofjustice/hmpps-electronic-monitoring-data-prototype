@@ -1,0 +1,211 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-thirds">
+        <h1 class="govuk-heading-xl">Probation details for John Doe</h1>
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+              <a class="govuk-tabs__tab" href="#overview">
+                Overview
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#detail">
+                Detail
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#action">
+                Action
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-tabs__panel" id="overview" style="height:1200px;" >
+            <h2 class="govuk-heading-l">Person on probation overview</h2>
+           
+
+            
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Person details
+                </h2>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      John Doe
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      CRN
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      CZ39271
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Address
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      31 High Street, London, W1A 1AA
+                    </dd>                  
+                  </div>               
+                </dl>
+              </div>
+            </div>
+           
+           
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Curfew details
+                </h2>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Start date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      5th September 2024
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      End date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      31st September 2024
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Start time
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      7.00 PM
+                    </dd>                 
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      End time 
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      7.00 AM
+                    </dd>                 
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Total violation minutes
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    100                  
+                  </dd>
+                  </div>
+                  
+                </dl>
+              </div>
+            </div>
+            
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="detail">
+            <h2 class="govuk-heading-l"></h2>
+            <img src="/public/images/3.jpg" alt="User icon" height="100%" width="100%">
+            <img src="/public/images/4.jpg" alt="User icon" height="100%" width="100%">
+
+
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="action">
+            <h2 class="govuk-heading-l">Person on probation details</h2>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Case manager</th>
+                  <th scope="col" class="govuk-table__header">Cases opened</th>
+                  <th scope="col" class="govuk-table__header">Cases closed</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">David Francis</td>
+                  <td class="govuk-table__cell">98</td>
+                  <td class="govuk-table__cell">95</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Paul Farmer</td>
+                  <td class="govuk-table__cell">122</td>
+                  <td class="govuk-table__cell">131</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Rita Patel</td>
+                  <td class="govuk-table__cell">126</td>
+                  <td class="govuk-table__cell">142</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="contact">
+            <h2 class="govuk-heading-l">Past year</h2>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Case manager</th>
+                  <th scope="col" class="govuk-table__header">Cases opened</th>
+                  <th scope="col" class="govuk-table__header">Cases closed</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">David Francis</td>
+                  <td class="govuk-table__cell">1380</td>
+                  <td class="govuk-table__cell">1472</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Paul Farmer</td>
+                  <td class="govuk-table__cell">1129</td>
+                  <td class="govuk-table__cell">1083</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Rita Patel</td>
+                  <td class="govuk-table__cell">1539</td>
+                  <td class="govuk-table__cell">1265</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+      </div>
+
+      <!--<div class="govuk-grid-column-one-third" style="margin-top: 100px;">
+hello
+      </div>-->
+    </div>
+  </main>
+</div>
+
+  
+{% endblock %}
