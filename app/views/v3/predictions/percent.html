@@ -1,0 +1,272 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-thirds">
+        <h1 class="govuk-heading-xl">Curfew details for Richard Marks</h1>      
+        <div class="govuk-tabs" data-module="govuk-tabs" >
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+              <a class="govuk-tabs__tab" href="#overview">
+                Overview
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#violations">
+                Violations
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#predictions">
+                Predictions
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#historic">
+                Historic behaviour
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-tabs__panel" id="overview">
+            <h2 class="govuk-heading-l">Person on probation overview</h2>
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Person details
+                </h2>
+              </div>
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Richard Marks
+                    </dd>
+                   
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      CRN
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      CZ39271
+                    </dd>  
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Address
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      31 High Street, London, W1A 1AA
+                    </dd>                  
+                  </div>               
+                </dl>
+              </div> 
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-summary-card__content">   
+                <img src="/public/images/photo.png">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- TAB content -->
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Curfew details
+                </h2>              
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Start date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      5th September 2024
+                    </dd>                  
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      End date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      31st September 2024
+                    </dd>                
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Start time
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      7.00 PM
+                    </dd>                 
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      End time 
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      7.00 AM
+                    </dd>                 
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Total violation minutes
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    100                  
+                  </dd>
+                  </div>                 
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <!--Tab 3 content-->
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="violations">
+            <h2 class="govuk-heading-l">Violation details for Richard Marks</h2>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Violation date</th>
+                  <th scope="col" class="govuk-table__header">Violation start time </th>
+                  <th scope="col" class="govuk-table__header">Violation end time</th>
+                  <th scope="col" class="govuk-table__header">Violation minutes</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">1st September 2024</td>
+                  <td class="govuk-table__cell">10.40PM</td>
+                  <td class="govuk-table__cell">10.45PM</td>
+                  <td class="govuk-table__cell">5</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">21st September 2024</td>
+                  <td class="govuk-table__cell">1.40PM</td>
+                  <td class="govuk-table__cell">1.45PM</td>
+                  <td class="govuk-table__cell">5</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">28th September 2024</td>
+                  <td class="govuk-table__cell">10.00PM</td>
+                  <td class="govuk-table__cell">10.45PM</td>
+                  <td class="govuk-table__cell">45</td>
+                </tr>
+              </tbody>
+            </table>       
+          </div>
+
+        <!--Tab 4 content-->
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="predictions">
+            <h2 class="govuk-heading-l">Prediction details for Richard Marks</h2>         
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <p>Richard Marks is predicted to violate their home detention curfew (HDC) within the next 2 weeks.</p>
+                <h3 class="govuk-heading-m">Likelihood of violation in the next 14 days:</h3>
+                <ul> 
+                 <li>High – 80%</li>             
+              </ul>   
+              <h3 class="govuk-heading-m">  Further information </h3>
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    How this prediction was formulated
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                 <p>Richard Marks is 80% predicted to violate their HDC within the next 14 days.</p>
+                 <p>Richard is predicted to violate based on their recent HDC behaviour and previous custodial sentences.</p>       
+                 <h3 class="govuk-heading-m">Recent HDC behaviour</h3>
+                  <ul>
+                    <li>Number of violation minutes – 45 minutes in last 7 days</li>
+                    <li>Percentage of days under HDC with violation – 20% of total days</li>
+                  </ul>
+                  <h3 class="govuk-heading-m">Previous custodial sentences</h3>               
+                  <ul>
+                    <li>Burglary – May 2024 to January 2025</li>
+                  </ul>    
+                  <h3 class="govuk-heading-m">Things you need to know about this prediction</h3>
+                  <p>This prediction is accurate from midnight 30 March to midnight 13 April 2025.</p>
+                  <p>This prediction was calculated at 9.30am on 31 March 2025.</p>
+                  <p>This prediction will be updated daily by 10am each day.</p>
+                  <p><a href="#">Sign up for prediction updates for Richard Marks</a></p>
+                  </div>
+              </details>
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Check Richard’s HDC and probation notes
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+
+                  <p>Use the following services to check Richard’s HDC and probation notes: </p>
+                  <ul>
+                    <li><a href="#">Manage people on probation (MPoP)</a> - For general information </li>
+                    <li><a href="#">NDelius</a> - For case management notes</li>
+                    <li><a href="#">OASys</a> - For offending-related needs</li>        
+                  </ul>
+                </div>
+              </details>           
+              </div>
+              <div class="govuk-grid-column-one-third" style="margin-top: 0;">
+                <img src="/public/images/percent.jpg" height="50%" width="70%">
+              </div>
+            </div>
+          </div>
+       
+          <!--Tab 5-->
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="historic">
+            <h2 class="govuk-heading-l">Historic behaviour details for Richard Marks</h2>  
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Violation date</th>
+                  <th scope="col" class="govuk-table__header">Violation start time </th>
+                  <th scope="col" class="govuk-table__header">Violation end time</th>
+                  <th scope="col" class="govuk-table__header">Violation minutes</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">1st September 2024</td>
+                  <td class="govuk-table__cell">10.40PM</td>
+                  <td class="govuk-table__cell">10.45PM</td>
+                  <td class="govuk-table__cell">5</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">21st September 2024</td>
+                  <td class="govuk-table__cell">1.40PM</td>
+                  <td class="govuk-table__cell">1.45PM</td>
+                  <td class="govuk-table__cell">5</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">28th September 2024</td>
+                  <td class="govuk-table__cell">10.00PM</td>
+                  <td class="govuk-table__cell">10.45PM</td>
+                  <td class="govuk-table__cell">45</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
