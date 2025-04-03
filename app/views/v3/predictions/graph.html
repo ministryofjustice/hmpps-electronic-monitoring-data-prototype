@@ -6,7 +6,7 @@
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-thirds">
-        <h1 class="govuk-heading-xl">Curfew details for Jane Doe</h1>
+        <h1 class="govuk-heading-xl">Curfew details for John Doe</h1>
        
         <div class="govuk-tabs" data-module="govuk-tabs" >
 
@@ -151,6 +151,103 @@
 
           <!--Tab 3 content-->
           <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="violations">
+            <h2 class="govuk-heading-l">Violation details for John Doe</h2>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Violation date</th>
+                  <th scope="col" class="govuk-table__header">Violation start time </th>
+                  <th scope="col" class="govuk-table__header">Violation end time</th>
+                  <th scope="col" class="govuk-table__header">Violation minutes</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">1st September 2024</td>
+                  <td class="govuk-table__cell">10.40PM</td>
+                  <td class="govuk-table__cell">10.45PM</td>
+                  <td class="govuk-table__cell">5</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">21st September 2024</td>
+                  <td class="govuk-table__cell">1.40PM</td>
+                  <td class="govuk-table__cell">1.45PM</td>
+                  <td class="govuk-table__cell">5</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">28th September 2024</td>
+                  <td class="govuk-table__cell">10.00PM</td>
+                  <td class="govuk-table__cell">10.45PM</td>
+                  <td class="govuk-table__cell">45</td>
+                </tr>
+              </tbody>
+            </table>       
+          </div>
+
+        <!--Tab 4 content-->
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="predictions">
+            <h2 class="govuk-heading-l">Prediction details for Jane Doe</h2>         
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <p>Richard Marks is predicted to violate their home detention curfew (HDC) within the next 2 weeks.</p>
+                <p>Likelihood of violation in the next 14 days:  <strong class="govuk-tag--red">
+                  High – 80% 
+                </strong>
+              </p>  
+              <h3 class="govuk-heading-m">  Further information </h3>
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    How this prediction was formulated
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                 <p>Richard Marks is 80% predicted to violate their home detention curfew (HDC) within the next 14 days.</p>
+                 <p>Richard is predicted to violate based on their recent HDC behaviour and previous custodial sentences.</p>       
+                 <h3 class="govuk-heading-m">Recent HDC behaviour</h3>
+                  <ul>
+                    <li>Number of violation minutes – 45 minutes in last 7 days</li>
+                    <li>Percentage of days under HDC with violation – 20% of total days</li>
+                  </ul>
+                  <h3 class="govuk-heading-m">Previous custodial sentences</h3>               
+                  <ul>
+                    <li>Burglary – May 2024 to January 2025</li>
+                  </ul>               
+                 </div>
+              </details>
+
+
+
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Check Richard’s HDC and probation notes
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+
+                  <p>Use the following services to check Richard’s home detention curfew (HDC) and probation notes: </p>
+                  <ul>
+                    <li><a href="#">people on probation (MPoP)</a> - For general information </li>
+                    <li><a href="#">NDelius</a> - For case management notes</li>
+                    <li><a href="#">OASys</a> - For offending-related needs</li>        
+                  </ul>
+                </div>
+              </details>
+
+
+
+                <p style=""> </p>                
+              </div>
+              <div class="govuk-grid-column-one-third" style="margin-top: 0;">
+                  {% include "/v3/chart2.html" %}
+                </div>
+            </div>
+          </div>
+       
+          <!--Tab 5-->
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="historic">
+            <h2 class="govuk-heading-l">Historic behaviour details for Jane Doe</h2>  
             <table class="govuk-table">
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -181,106 +278,10 @@
                 </tr>
               </tbody>
             </table>
-         
           </div>
-
-
-
-        <!--Tab 4 content-->
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="predictions">
-            <div class="govuk-summary-card">
-              <div class="govuk-summary-card__title-wrapper">
-                <h2 class="govuk-summary-card__title">
-                  Person details
-                </h2>
-              </div>
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-              <div class="govuk-summary-card__content">
-                <dl class="govuk-summary-list">
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      Name
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      John Doe
-                    </dd>
-                   
-                  </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      CRN
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      CZ39271
-                    </dd>  
-                  </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      Address
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      31 High Street, London, W1A 1AA
-                    </dd>                  
-                  </div>               
-                </dl>
-              </div>
-              
-            </div>
-            <div class="govuk-grid-column-one-third">
-              <div class="govuk-summary-card__content">
-    
-                {% include "/v3/chart2.html" %}
           </div>
         </div>
-          </div>
-        </div>
-          
-           
-          </div>
-
-
-
-
-          <!--Tab 5-->
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="historic">
-            <h2 class="govuk-heading-l">Past year</h2>
-            <table class="govuk-table">
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Case manager</th>
-                  <th scope="col" class="govuk-table__header">Cases opened</th>
-                  <th scope="col" class="govuk-table__header">Cases closed</th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">David Francis</td>
-                  <td class="govuk-table__cell">1380</td>
-                  <td class="govuk-table__cell">1472</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Paul Farmer</td>
-                  <td class="govuk-table__cell">1129</td>
-                  <td class="govuk-table__cell">1083</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Rita Patel</td>
-                  <td class="govuk-table__cell">1539</td>
-                  <td class="govuk-table__cell">1265</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          </div>
-      </div>
-
-      <!--<div class="govuk-grid-column-one-third" style="margin-top: 100px;">
-hello
-      </div>-->
     </div>
   </main>
 </div>
-
-  
 {% endblock %}
