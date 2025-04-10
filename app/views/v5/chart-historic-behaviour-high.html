@@ -1,4 +1,4 @@
-<h2 class="govuk-heading-l">Historic violation predictions</h2>
+<h2 class="govuk-heading-l">Past prediction details</h2>
 
 <div>
   <section aria-label="Service information" class="govuk-service-navigation"
@@ -9,8 +9,8 @@
         <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
           Menu
         </button>
-       
-       
+
+
         <ul class="govuk-service-navigation__list" id="navigation7day">
           <li class="govuk-service-navigation__item govuk-service-navigation__item--active" onclick="toggleTime7Days()">
             <a class="govuk-service-navigation__link" href="#" aria-current="true" >
@@ -19,17 +19,15 @@
           </li>
           <li class="govuk-service-navigation__item" onclick="toggleTime7DaysHistoric()">
             <a class="govuk-service-navigation__link" href="#">
-              Choose a date range
+              Choose date range
             </a>
           </li>
         </ul>
-      </nav>   
+      </nav>
     </div>
-
     <br />
- 
     <div class="govuk-button-group">
-      <button onclick="toggleDataGraphHistoric()" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="buttonToggle">Show as a data table</button>
+      <button onclick="toggleDataGraphHistoric()" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="buttonToggleHistoric">Show data table</button>
   </div>
   </div>
 </section>
@@ -43,37 +41,37 @@
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Prediction date</th>
-        <th scope="col" class="govuk-table__header">Chance of Violation </th>
-       
+        <th scope="col" class="govuk-table__header">Likelihood of violation (%)</th>
+
       </tr>
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell">7 April 2025</td> 
+        <td class="govuk-table__cell">Mon 7 April 2025</td>
         <td class="govuk-table__cell">65%</td>
       </tr>
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell">8 April 2025</td>
+        <td class="govuk-table__cell">Tue 8 April 2025</td>
         <td class="govuk-table__cell">90%</td>
       </tr>
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell">9 April 2025</td>
+        <td class="govuk-table__cell">Wed 9 April 2025</td>
         <td class="govuk-table__cell">60%</td>
       </tr>
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell">10 April 2025</td>
+        <td class="govuk-table__cell">Thur 10 April 2025</td>
         <td class="govuk-table__cell">70%</td>
       </tr>
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell">11 April 2025</td>
+        <td class="govuk-table__cell">Fri 11 April 2025</td>
         <td class="govuk-table__cell">75%</td>
       </tr>
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell">12 April 2025</td>
+        <td class="govuk-table__cell">Sat 12 April 2025</td>
         <td class="govuk-table__cell">80%</td>
       </tr>
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell">13 April 2025</td>
+        <td class="govuk-table__cell">Sun 13 April 2025</td>
         <td class="govuk-table__cell">80%</td>
       </tr>
     </tbody>
@@ -83,14 +81,14 @@
 <script>
     const week = document.getElementById('WeekChartHistoric');
 </script>
-    
+
 <script>
 new Chart(WeekChartHistoric, {
   type: 'line',
   data: {
-    labels: ['7 April 2025', '8 April 2025', '9 April 2025', '10 April 2025', '11 April 2025', '12 April 2025',  '13 April 2025'],
+    labels: ['Mon 7 April 2025', 'Tue 8 April 2025', 'Wed 9 April 2025', 'Thur 10 April 2025', 'Fri 11 April 2025', 'Sat 12 April 2025',  'Sun 13 April 2025'],
     datasets: [{
-      label: 'Predicted chance of violation',
+      label: 'Likelihood of violation (%)',
       data: [65, 90, 60, 70, 75, 80, 80],
       borderWidth: 1
     }]
@@ -114,17 +112,17 @@ function toggleDataGraphHistoric() {
   var x = document.getElementById("ShowChartHistoric");
   var y = document.getElementById("ShowDataHistoric");
   var z = document.getElementById("buttonToggleHistoric");
-  
+
 
   if (x.style.display === "none") {
     x.style.display = "block";
     y.style.display = "none";
-    z.innerHTML = "Show as a data table"
+    z.innerHTML = "Show data table"
 
   } else {
     x.style.display = "none";
     y.style.display = "block";
-    z.innerHTML = "Show as a graph"
+    z.innerHTML = "Show graph"
   }
 }
 </script>
