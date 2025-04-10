@@ -1,0 +1,130 @@
+<h2 class="govuk-heading-l">Historic violation predictions</h2>
+
+<div>
+  <section aria-label="Service information" class="govuk-service-navigation"
+  data-module="govuk-service-navigation" style="background-color: white; margin-bottom: 20px; margin-top: -10pxl;">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+          Menu
+        </button>
+       
+       
+        <ul class="govuk-service-navigation__list" id="navigation7day">
+          <li class="govuk-service-navigation__item govuk-service-navigation__item--active" onclick="toggleTime7Days()">
+            <a class="govuk-service-navigation__link" href="#" aria-current="true" >
+              <strong class="govuk-service-navigation__active-fallback">Last 7 days</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item" onclick="toggleTime7DaysHistoric()">
+            <a class="govuk-service-navigation__link" href="#">
+              Choose a date range
+            </a>
+          </li>
+        </ul>
+      </nav>   
+    </div>
+
+    <br />
+ 
+    <div class="govuk-button-group">
+      <button onclick="toggleDataGraphHistoric()" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="buttonToggle">Show as a data table</button>
+  </div>
+  </div>
+</section>
+</div>
+<div id="ShowChartHistoric">
+<canvas id="WeekChartHistoric"></canvas>
+</div>
+
+<div id="ShowDataHistoric">
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Prediction date</th>
+        <th scope="col" class="govuk-table__header">Chance of Violation </th>
+       
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">7 April 2025</td> 
+        <td class="govuk-table__cell">0%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">8 April 2025</td>
+        <td class="govuk-table__cell">5%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">9 April 2025</td>
+        <td class="govuk-table__cell">8%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">10 April 2025</td>
+        <td class="govuk-table__cell">2%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">11 April 2025</td>
+        <td class="govuk-table__cell">2%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">12 April 2025</td>
+        <td class="govuk-table__cell">0%</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const week = document.getElementById('WeekChartHistoric');
+</script>
+    
+<script>
+new Chart(WeekChartHistoric, {
+  type: 'line',
+  data: {
+    labels: ['7 April 2025', '8 April 2025', '9 April 2025', '10 April 2025', '11 April 2025', '12 April 2025'],
+    datasets: [{
+      label: 'Predicted chance of violation',
+      data: [0, 5, 8, 2, 2, 0],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+        max:100
+      }
+    }
+  }
+});
+
+
+
+
+
+</script>
+
+<script>
+document.getElementById("ShowDataHistoric").style.display="none";
+
+function toggleDataGraphHistoric() {
+  var x = document.getElementById("ShowChartHistoric");
+  var y = document.getElementById("ShowDataHistoric");
+  var z = document.getElementById("buttonToggleHistoric");
+  
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+    z.innerHTML = "Show as a data table"
+
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+    z.innerHTML = "Show as a graph"
+  }
+}
+</script>

@@ -50,31 +50,31 @@
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">7 April 2025</td> 
-        <td class="govuk-table__cell">100</td>
+        <td class="govuk-table__cell">65%</td>
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">8 April 2025</td>
-        <td class="govuk-table__cell">90</td>
+        <td class="govuk-table__cell">90%</td>
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">9 April 2025</td>
-        <td class="govuk-table__cell">80</td>
+        <td class="govuk-table__cell">60%</td>
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">10 April 2025</td>
-        <td class="govuk-table__cell">73</td>
+        <td class="govuk-table__cell">70%</td>
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">11 April 2025</td>
-        <td class="govuk-table__cell">62</td>
+        <td class="govuk-table__cell">75%</td>
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">12 April 2025</td>
-        <td class="govuk-table__cell">62</td>
+        <td class="govuk-table__cell">80%</td>
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">13 April 2025</td>
-        <td class="govuk-table__cell">50</td>
+        <td class="govuk-table__cell">80%</td>
       </tr>
     </tbody>
   </table>
@@ -91,14 +91,15 @@ new Chart(WeekChartHistoric, {
     labels: ['7 April 2025', '8 April 2025', '9 April 2025', '10 April 2025', '11 April 2025', '12 April 2025',  '13 April 2025'],
     datasets: [{
       label: 'Predicted chance of violation',
-      data: [100, 90, 80, 73, 62, 62, 50],
+      data: [65, 90, 60, 70, 75, 80, 80],
       borderWidth: 1
     }]
   },
   options: {
     scales: {
       y: {
-        beginAtZero: true
+        beginAtZero: true,
+        max:100
       }
     }
   }
