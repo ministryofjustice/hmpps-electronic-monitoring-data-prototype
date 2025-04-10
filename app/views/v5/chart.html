@@ -1,4 +1,5 @@
-<h2 class="govuk-heading-l">Violation time in minutes for the last week</h2>
+<h2 class="govuk-heading-l">Violation time in minutes</h2>
+
 <div>
   <section aria-label="Service information" class="govuk-service-navigation"
   data-module="govuk-service-navigation" style="background-color: white; margin-bottom: 20px; margin-top: -10pxl;">
@@ -8,70 +9,307 @@
         <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
           Menu
         </button>
-        <ul class="govuk-service-navigation__list" id="navigation">
-          <li class="govuk-service-navigation__item">
-            <a class="govuk-service-navigation__link" href="#">
-              Last 24 hours
-            </a>
-          </li>
-          <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
-            <a class="govuk-service-navigation__link" href="#" aria-current="true">
+       
+       
+        <ul class="govuk-service-navigation__list" id="navigation7day">
+          <li class="govuk-service-navigation__item govuk-service-navigation__item--active" onclick="toggleTime7Days()">
+            <a class="govuk-service-navigation__link" href="#" aria-current="true" >
               <strong class="govuk-service-navigation__active-fallback">Last 7 days</strong>
             </a>
           </li>
-          <li class="govuk-service-navigation__item">
+          <li class="govuk-service-navigation__item" onclick="toggleTime7Days()">
             <a class="govuk-service-navigation__link" href="#">
-              Last 28 days
+              Choose a date range
             </a>
           </li>
-        </li>
-        <li class="govuk-service-navigation__item">
-          <a class="govuk-service-navigation__link" href="#">
-            Choose a date range
-          </a>
-        </li>
-        <li class="govuk-service-navigation__item">
-          <a class="govuk-service-navigation__link" href="#">
-            All time on curfew
-          </a>
-        </li>
         </ul>
-      </nav>k
+
+
+        <ul class="govuk-service-navigation__list" id="navigationChoose" >
+          <li class="govuk-service-navigation__item" onclick="toggleTime7Days()">
+            <a class="govuk-service-navigation__link" href="#" aria-current="true" >
+              <strong class="govuk-service-navigation__active-fallback">Last 7 day</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item govuk-service-navigation__item--active" onclick="toggleTime7Days()">
+            <a class="govuk-service-navigation__link" href="#" >
+              Choose a date range
+            </a>
+          </li>
+        </ul>
+      </nav>   
+    </div>
+    <div id="enterChooseDates">
+
+      <div class="govuk-form-group" style="margin-top: 20px;">
+        <h3 class="govuk-fieldset__heading">
+          Enter the start date
+        </h3>
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint"style="margin-top: 10px;">
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <h3 class="govuk-fieldset__heading" style="margin-top: 20px;">
+          Enter the end date
+        </h3>
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint"style="margin-top: 10px;">
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Search
+      </button>
+      <hr />
     </div>
     <br />
+    <br />
+    <div class="govuk-button-group">
+      <button onclick="toggleDataGraph()" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="buttonToggle">Show as a data table</button>
+  </div>
   </div>
 </section>
 </div>
-<div>
-    <canvas id="WeekChart"></canvas>
-    <h2 class="govuk-heading-l">Violation time in minutes for the last 4 months</h2>
-    <canvas id="MonthChart"></canvas>
+<div id="ShowChart">
+<canvas id="WeekChart"></canvas>
+</div>
+<!--
+<div id="MonthChart">
+  <canvas id="MonthChart"></canvas>
   </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
+  -->
+
+<div id="ShowData">
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Violation date</th>
+        <th scope="col" class="govuk-table__header">Violation start time </th>
+        <th scope="col" class="govuk-table__header">Violation end time</th>
+        <th scope="col" class="govuk-table__header">Violation minutes</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">1 April 2025</td>
+        <td class="govuk-table__cell">10.40 PM</td>
+        <td class="govuk-table__cell">10.52 PM</td>
+        <td class="govuk-table__cell">12</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">2 April 2025</td>
+        <td class="govuk-table__cell">1.50 PM</td>
+        <td class="govuk-table__cell">1.59 PM</td>
+        <td class="govuk-table__cell">9</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">2 April 2025</td>
+        <td class="govuk-table__cell">10.01 PM</td>
+        <td class="govuk-table__cell">10.11 PM</td>
+        <td class="govuk-table__cell">10</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">5 April 2025</td>
+        <td class="govuk-table__cell">11.05 PM</td>
+        <td class="govuk-table__cell">11.12 PM</td>
+        <td class="govuk-table__cell">7</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">7 April 2025</td>
+        <td class="govuk-table__cell">11.12 PM</td>
+        <td class="govuk-table__cell">11.22 PM</td>
+        <td class="govuk-table__cell">10</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+<!--
+  <div id="ShowDataMonth">
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Violation date</th>
+          <th scope="col" class="govuk-table__header">Violation start time </th>
+          <th scope="col" class="govuk-table__header">Violation end time</th>
+          <th scope="col" class="govuk-table__header">Violation minutes</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">1 April 2025</td>
+          <td class="govuk-table__cell">10.40 PM</td>
+          <td class="govuk-table__cell">10.52 PM</td>
+          <td class="govuk-table__cell">12</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">2 April 2025</td>
+          <td class="govuk-table__cell">1.50 PM</td>
+          <td class="govuk-table__cell">1.59 PM</td>
+          <td class="govuk-table__cell">9</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">2 April 2025</td>
+          <td class="govuk-table__cell">10.01 PM</td>
+          <td class="govuk-table__cell">10.11 PM</td>
+          <td class="govuk-table__cell">10</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">5 April 2025</td>
+          <td class="govuk-table__cell">11.05 PM</td>
+          <td class="govuk-table__cell">11.12 PM</td>
+          <td class="govuk-table__cell">7</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">7 April 2025</td>
+          <td class="govuk-table__cell">11.12 PM</td>
+          <td class="govuk-table__cell">11.22 PM</td>
+          <td class="govuk-table__cell">10</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
     const week = document.getElementById('WeekChart');
     const month = document.getElementById('MonthChart');
 </script>
     
-    <script>
-    new Chart(week, {
-      type: 'doughnut',
-      data: {
-        labels: ['Percentage chance of a violation not occuring', 'Percentage change of a violation'],
-        datasets: [{
-          label: 'Percentage change of a violation',
-          data: [20,80],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
+<script>
+new Chart(week, {
+  type: 'bar',
+  data: {
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    datasets: [{
+      label: 'Time in minutes',
+      data: [12, 19, 0, 0, 7, 0, 10],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
       }
-    });
+    }
+  }
+});
+
+new Chart(month, {
+  type: 'bar',
+  data: {
+    labels: ['January', 'February', 'March'],
+    datasets: [{
+      label: 'Time in minutes',
+      data: [0, 19, 30],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
 </script>
-   
+
+<script>
+document.getElementById("enterChooseDates").style.display="none";
+document.getElementById("ShowData").style.display="none";
+document.getElementById("navigationChoose").style.display="none";
+document.getElementById("ShowDataMonth").style.display="none";
+
+
+function toggleDataGraph() {
+  var x = document.getElementById("ShowChart");
+  var y = document.getElementById("ShowData");
+  var z = document.getElementById("buttonToggle");
+  
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+    z.innerHTML = "Show as a data table"
+
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+    z.innerHTML = "Show as a graph"
+  }
+}
+
+function toggleTime7Days() {
+  var a = document.getElementById("navigation7day");
+  var b = document.getElementById("navigationChoose");
+  var c = document.getElementById("enterChooseDates");
+
+  if (a.style.display === "none") {
+    a.style.display = "inline";
+    b.style.display = "none";
+    c.style.display = "none";
+
+
+  } else {
+    a.style.display = "none";
+    b.style.display = "inline";
+    c.style.display = "inline";
+  }
+}
+
+$("#hide").click(function(){
+  $("p").hide();
+});
+
+$("#show").click(function(){
+  $("p").show();
+});
+</script>

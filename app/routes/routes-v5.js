@@ -8,21 +8,10 @@ res.redirect(version +'/home-nav')
         });
 
 
-router.post(version +'/1', function(req, res) {
+router.post(version +'/predictions/graph0', function(req, res) {
     ///////CREATE//////////
-    if(req.session.data.toggleToDataValue !=='data' && req.session.data.toggleToDataValue !=='graph' ){
-        req.session.data.toggleToDataValue ='graph'
-    }
-   else if(req.session.data.toggleToDataValue =='data'){
-        req.session.data.toggleToDataValue ='graph'
-    }
-    else if(req.session.data.toggleToDataValue =='graph'){
-        req.session.data.toggleToDataValue ='data'
-    }
-    else{
-        req.session.data.toggleToDataValue ='none'
-    }
-    });
+    res.redirect(version +'/home-nav')
+        });
 
 
     }
