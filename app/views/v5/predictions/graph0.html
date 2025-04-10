@@ -29,7 +29,7 @@
             </li>
             <li class="govuk-tabs__list-item">
               <a class="govuk-tabs__tab" href="#historic">
-                Historic behaviour
+                Historic violation predictions
               </a>
             </li>
           </ul>
@@ -184,37 +184,8 @@
 
           <!--Tab 4-->
           <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="historic">
-            <h2 class="govuk-heading-l">Historic behaviour details for Richard Marks</h2>
-            <table class="govuk-table">
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Violation date</th>
-                  <th scope="col" class="govuk-table__header">Violation start time </th>
-                  <th scope="col" class="govuk-table__header">Violation end time</th>
-                  <th scope="col" class="govuk-table__header">Violation minutes</th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">1st September 2024</td>
-                  <td class="govuk-table__cell">10.40PM</td>
-                  <td class="govuk-table__cell">10.45PM</td>
-                  <td class="govuk-table__cell">5</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">21st September 2024</td>
-                  <td class="govuk-table__cell">1.40PM</td>
-                  <td class="govuk-table__cell">1.45PM</td>
-                  <td class="govuk-table__cell">5</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">28th September 2024</td>
-                  <td class="govuk-table__cell">10.00PM</td>
-                  <td class="govuk-table__cell">10.45PM</td>
-                  <td class="govuk-table__cell">45</td>
-                </tr>
-              </tbody>
-            </table>
+            {% include "/v5/chart-historic-behaviour.html" %}
+
           </div>
           </div>
         </div>
