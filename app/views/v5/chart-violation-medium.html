@@ -1,0 +1,281 @@
+<h2 class="govuk-heading-l">Violation time in minutes</h2>
+
+<div>
+  <section aria-label="Service information" class="govuk-service-navigation"
+  data-module="govuk-service-navigation" style="background-color: white; margin-bottom: 20px; margin-top: -10pxl;">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+          Menu
+        </button>
+
+
+        <ul class="govuk-service-navigation__list" id="navigation7day">
+          <li class="govuk-service-navigation__item govuk-service-navigation__item--active" onclick="toggleTime7Days()">
+            <a class="govuk-service-navigation__link" href="#" aria-current="true" >
+              <strong class="govuk-service-navigation__active-fallback">Last 7 days</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item" onclick="toggleTime7Days()">
+            <a class="govuk-service-navigation__link" href="#">
+              Choose a date range
+            </a>
+          </li>
+        </ul>
+
+
+        <ul class="govuk-service-navigation__list" id="navigationChoose" >
+          <li class="govuk-service-navigation__item" onclick="toggleTime7Days()">
+            <a class="govuk-service-navigation__link" href="#" aria-current="true" >
+              <strong class="govuk-service-navigation__active-fallback">Last 7 day</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item govuk-service-navigation__item--active" onclick="toggleTime7Days()">
+            <a class="govuk-service-navigation__link" href="#" >
+              Choose a date range
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="enterChooseDates">
+
+      <div class="govuk-form-group" style="margin-top: 20px;">
+        <h3 class="govuk-fieldset__heading">
+          Enter the start date
+        </h3>
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint"style="margin-top: 10px;">
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <h3 class="govuk-fieldset__heading" style="margin-top: 20px;">
+          Enter the end date
+        </h3>
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint"style="margin-top: 10px;">
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Search
+      </button>
+      <hr />
+    </div>
+    <br />
+    <br />
+    <div class="govuk-button-group">
+      <button onclick="toggleDataGraph()" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="buttonToggle">Show as a data table</button>
+  </div>
+  </div>
+</section>
+</div>
+<div id="ShowChart">
+<canvas id="WeekChart"></canvas>
+</div>
+<!--
+<div id="MonthChart">
+  <canvas id="MonthChart"></canvas>
+  </div>
+  -->
+
+<div id="ShowData">
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Violation date</th>
+        <th scope="col" class="govuk-table__header">Start time </th>
+        <th scope="col" class="govuk-table__header">End time</th>
+        <th scope="col" class="govuk-table__header" class="numeric" scope="col">Violation minutes</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">Mon 7 April 2025</td>
+        <td class="govuk-table__cell">10.40 PM</td>
+        <td class="govuk-table__cell">10.43 PM</td>
+        <td class="govuk-table__cell numeric">3</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Tue 8 April 2025</td>
+        <td class="govuk-table__cell">10.01 PM</td>
+        <td class="govuk-table__cell">10.06 PM</td>
+        <td class="govuk-table__cell numeric">5</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Wed 9 April 2025</td>
+        <td class="govuk-table__cell">11.05 PM</td>
+        <td class="govuk-table__cell">11.10 PM</td>
+        <td class="govuk-table__cell numeric">5</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Thur 10 April 2025</td>
+        <td class="govuk-table__cell">11.05 PM</td>
+        <td class="govuk-table__cell">11.07 PM</td>
+        <td class="govuk-table__cell numeric">2</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Fri 11 April 2025</td>
+        <td class="govuk-table__cell">11.05 PM</td>
+        <td class="govuk-table__cell">11.07 PM</td>
+        <td class="govuk-table__cell numeric">2</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Sun 13 April 2025</td>
+        <td class="govuk-table__cell">11.05 PM</td>
+        <td class="govuk-table__cell">11.11 PM</td>
+        <td class="govuk-table__cell numeric">2</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" colspan="2"><strong>Total violation minutes for the last 7 days</strong></td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell numeric"><strong>19</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const week = document.getElementById('WeekChart');
+    const month = document.getElementById('MonthChart');
+</script>
+
+<script>
+new Chart(week, {
+  type: 'bar',
+  data: {
+    labels: ['Mon 7 April 2025', 'Tue 8 April 2025', 'Wed 9 April 2025', 'Thur 10 April 2025', 'Fri 11 April 2025', 'Sat 12 April 2025', 'Sun 13 April 2025'],
+    datasets: [{
+      label: 'Time in minutes',
+      data: [3, 5, 5, 2, 2, 0, 2],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+new Chart(month, {
+  type: 'bar',
+  data: {
+    labels: ['January', 'February', 'March'],
+    datasets: [{
+      label: 'Time in minutes',
+      data: [0, 19, 30],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+</script>
+
+<script>
+document.getElementById("enterChooseDates").style.display="none";
+document.getElementById("ShowData").style.display="none";
+document.getElementById("navigationChoose").style.display="none";
+document.getElementById("ShowDataMonth").style.display="none";
+
+
+function toggleDataGraph() {
+  var x = document.getElementById("ShowChart");
+  var y = document.getElementById("ShowData");
+  var z = document.getElementById("buttonToggle");
+
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+    z.innerHTML = "Show as a data table"
+
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+    z.innerHTML = "Show as a graph"
+  }
+}
+
+function toggleTime7Days() {
+  var a = document.getElementById("navigation7day");
+  var b = document.getElementById("navigationChoose");
+  var c = document.getElementById("enterChooseDates");
+
+  if (a.style.display === "none") {
+    a.style.display = "inline";
+    b.style.display = "none";
+    c.style.display = "none";
+
+
+  } else {
+    a.style.display = "none";
+    b.style.display = "inline";
+    c.style.display = "inline";
+  }
+}
+
+$("#hide").click(function(){
+  $("p").hide();
+});
+
+$("#show").click(function(){
+  $("p").show();
+});
+</script>
