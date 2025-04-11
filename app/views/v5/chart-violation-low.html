@@ -23,8 +23,6 @@
             </a>
           </li>
         </ul>
-
-
         <ul class="govuk-service-navigation__list" id="navigationChoose" >
           <li class="govuk-service-navigation__item" onclick="toggleTime7Days()">
             <a class="govuk-service-navigation__link" href="#" aria-current="true" >
@@ -40,7 +38,6 @@
       </nav>
     </div>
     <div id="enterChooseDates">
-
       <div class="govuk-form-group" style="margin-top: 20px;">
         <h3 class="govuk-fieldset__heading">
           Enter the start date
@@ -121,6 +118,49 @@
 <div id="ShowChart">
 <canvas id="WeekChart"></canvas>
 </div>
+<details class="govuk-details" style="margin-top:30px;">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+    Check Richard’s accumulated time violations (ATV)
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+  <p>Richard Marks has 8 minutes in accumulated time violations (ATV) since their HDC curfew started on Monday 7 April 2025.</p>
+  <p>Only unacceptable violations are included in Richard’s ATV.</p>
+  </div>
+</details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      How these violations were calculated
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   <p>Violation minutes accumulate when a person on probation (PoP) violates their curfew which is recorded when a PoP:</p>
+    <ul>
+      <li>arrives home after their curfew start time </li>
+      <li>leaves home during curfew </li>
+      <li>leaves home before their curfew end time </li>
+    </ul>
+    <p>The violation minutes on show include both acceptable and unacceptable violations.</p>
+    </div>
+</details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Check Richard’s HDC and probation notes
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+
+    <p>Use the following services to check Richard’s HDC and probation notes: </p>
+    <ul>
+      <li><a href="#">Manage people on probation (MPoP)</a> - For general information </li>
+      <li><a href="#">NDelius</a> - For case management notes</li>
+      <li><a href="#">OASys</a> - For offending-related needs</li>
+    </ul>
+  </div>
+</details>
 <!--
 <div id="MonthChart">
   <canvas id="MonthChart"></canvas>
