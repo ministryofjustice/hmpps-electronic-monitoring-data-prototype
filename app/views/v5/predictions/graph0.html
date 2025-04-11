@@ -27,11 +27,6 @@
                 Predictions
               </a>
             </li>
-            <li class="govuk-tabs__list-item">
-              <a class="govuk-tabs__tab" href="#historic">
-                Historic violation predictions
-              </a>
-            </li>
           </ul>
           <div class="govuk-tabs__panel" id="overview">
             <h2 class="govuk-heading-l">Person on probation overview</h2>
@@ -80,8 +75,6 @@
             </div>
           </div>
         </div>
-
-
         <!-- TAB content -->
             <div class="govuk-summary-card">
               <div class="govuk-summary-card__title-wrapper">
@@ -137,7 +130,7 @@
           </div>
 
           <!--Tab 2 - violations -  content-->
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="violations">           
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="violations">
               {% include "/v5/chart-violation-low.html" %}
           </div>
 
@@ -180,12 +173,6 @@
               </details>
               </div>
             </div>
-          </div>
-
-          <!--Tab 4-->
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="historic">
-            {% include "/v5/chart-historic-behaviour-low.html" %}
-
           </div>
           </div>
         </div>
